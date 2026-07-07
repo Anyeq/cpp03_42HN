@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/30 15:25:28 by asando            #+#    #+#             */
-/*   Updated: 2026/07/05 14:38:23 by asando           ###   ########.fr       */
+/*   Updated: 2026/07/07 13:14:25 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <string>
 
 class	ClapTrap {
-	private:
+	protected:
 		std::string _name;
 		int			_hitPoints;
 		int			_energyPoints;
