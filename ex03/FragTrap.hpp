@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/30 15:25:14 by asando            #+#    #+#             */
-/*   Updated: 2026/07/05 16:21:01 by asando           ###   ########.fr       */
+/*   Created: 2026/07/05 21:40:03 by asando            #+#    #+#             */
+/*   Updated: 2026/07/06 13:07:37 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main(void)
-{
-    ScavTrap a("Alex");
-    ScavTrap b("Enemy");
+# include "ClapTrap.hpp"
+# include <string>
 
-    a.attack("Enemy");
-    b.takeDamage(20);
+class	FragTrap : public ClapTrap {
+	public:
+		FragTrap();
+		FragTrap(const std::string& name);
+		FragTrap(const FragTrap& other);
+		FragTrap&	operator=(const FragTrap& rhs);
+		~FragTrap();
 
-    b.attack("Alex");
-    a.takeDamage(5);
+		void	highFivesGuys(void);
+};
 
-    a.beRepaired(10);
-
-    a.guardGate();
-
-    return 0;
-}
+#endif

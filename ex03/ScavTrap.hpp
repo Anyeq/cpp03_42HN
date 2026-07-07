@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/30 15:25:14 by asando            #+#    #+#             */
-/*   Updated: 2026/07/05 16:21:01 by asando           ###   ########.fr       */
+/*   Created: 2026/07/05 14:44:48 by asando            #+#    #+#             */
+/*   Updated: 2026/07/05 16:20:14 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main(void)
-{
-    ScavTrap a("Alex");
-    ScavTrap b("Enemy");
+# include "ClapTrap.hpp"
+# include <string>
 
-    a.attack("Enemy");
-    b.takeDamage(20);
+class	ScavTrap : public ClapTrap {
+	public:
+		ScavTrap();
+		ScavTrap(const std::string name);
+		ScavTrap(const ScavTrap& other);
+		ScavTrap& operator=(const ScavTrap& rhs);
+		~ScavTrap();
 
-    b.attack("Alex");
-    a.takeDamage(5);
+		void	attack(const std::string& target);
+		void	guardGate();
 
-    a.beRepaired(10);
-
-    a.guardGate();
-
-    return 0;
-}
+};
+#endif
