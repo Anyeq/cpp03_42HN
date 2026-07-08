@@ -6,7 +6,7 @@
 /*   By: asando <asando@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/05 21:40:03 by asando            #+#    #+#             */
-/*   Updated: 2026/07/06 13:07:37 by asando           ###   ########.fr       */
+/*   Updated: 2026/07/08 13:43:58 by asando           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "ClapTrap.hpp"
 # include <string>
 
-class	FragTrap : public ClapTrap {
+class	FragTrap : virtual public ClapTrap {
 	public:
 		FragTrap();
 		FragTrap(const std::string& name);
